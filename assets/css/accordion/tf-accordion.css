@@ -1,0 +1,98 @@
+.tf-accordion .accordion-title.icon_after .accordion-icon {
+    float: right;
+}
+
+.tf-accordion .tf-accordion-item:last-of-type {
+	margin-bottom: 0 !important;
+}
+
+.tf-accordion .tf-accordion-item {
+    border: 1px solid #DFE2E7;
+    background: #fff;
+    margin-bottom: 12px;
+    position: relative;
+    border-radius: 12px;
+}
+
+
+.tf-accordion .accordion-title {
+    cursor: pointer;
+    display: flex;
+      display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 19px ;
+    padding-right: 22px;
+}
+
+.tf-accordion .accordion-icon {
+    font-size: 13px;
+}
+
+.tf-accordion .tf-accordion-item.active .accordion-title {
+    padding-bottom: 12px;
+}
+
+.accordion-icon-open,
+.tf-accordion-item.active .accordion-icon-close {
+	display: none;
+}
+
+.accordion-icon-close,
+.tf-accordion-item.active .accordion-icon-open {
+	display: block;
+}
+
+.tf-accordion .accordion-title > span.wrap-accordion-icon {
+    display: flex;
+      display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-title,
+.wrap-accordion-icon {
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;  
+}
+.tf-accordion .tf-accordion-item { 
+    overflow: hidden;
+}
+.tf-accordion .tf-accordion-item .title-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #121212;
+    flex-grow: 1;
+}
+.tf-accordion .accordion-content,
+.tf-accordion .accordion-content p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #64666C;
+}
+
+.tf-accordion .accordion-content {
+    padding: 12px 0 19px;
+    margin: 0 19px;
+    border-top: 1px solid #DFE2E7;
+}
+
+.tf-accordion .wrap-accordion-icon {
+    font-size: 20px;
+    color: #121212;
+}
+
+@media (max-width: 767px) {
+
+}

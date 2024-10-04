@@ -1,0 +1,187 @@
+.tf-instagram .instagram-author {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.instagram-item .instagram-item-content,
+.tf-instagram .instagram-author .title {
+    font-size: 16px;
+    line-height: 30px;
+    color: #4F545A;
+}
+
+.instagram-item .instagram-item-content {
+    padding:15px;
+}
+
+.tf-instagram .instagram-author .link {
+    color: #0F0F2D;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.tf-instagram .instagram-author .link:hover {
+    color: var(--theme-primary-color);
+}
+
+.instagram-item .feature {
+    position: relative;
+}
+
+.instagram-item .feature img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.instagram-item .feature .icon {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    display: inline-flex;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.instagram-item .feature .icon:hover {
+    background-color: var(--theme-primary-color);
+}
+
+.instagram-item:hover .feature .icon {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.instagram-item .feature .icon i {
+    color: #fff;
+    font-size: 37px;
+    line-height: 1;
+}
+
+.instagram-item .feature .icon svg {
+    width: 37px;
+    fill: #fff;
+}
+
+
+.instagram-item .feature::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.8%, rgba(0, 0, 0, 0.71) 100%, rgba(0, 0, 0, 0.58) 100%);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.instagram-item:hover .feature::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrap-instagram {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.wrap-instagram.columns-1 {
+    grid-template-columns: repeat(1,1fr);
+}
+
+.wrap-instagram.columns-2 {
+    grid-template-columns: repeat(2,1fr);
+}
+.wrap-instagram.columns-3 {
+    grid-template-columns: repeat(3,1fr);
+}
+.wrap-instagram.columns-4 {
+    grid-template-columns: repeat(4,1fr);
+}
+.wrap-instagram.columns-5 {
+    grid-template-columns: repeat(5,1fr);
+}
+.wrap-instagram.columns-6 {
+    grid-template-columns: repeat(6,1fr);
+}
+.wrap-instagram.columns-7 {
+    grid-template-columns: repeat(7,1fr);
+}
+.wrap-instagram.columns-8 {
+    grid-template-columns: repeat(8,1fr);
+}
+.wrap-instagram.columns-9 {
+    grid-template-columns: repeat(9,1fr);
+}
+.wrap-instagram.columns-10 {
+    grid-template-columns: repeat(10,1fr);
+}
+
+@media (max-width: 1024px) {
+    .wrap-instagram.columns-mb-1  {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .wrap-instagram.columns-tb-2  {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .wrap-instagram.columns-tb-3  {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .wrap-instagram.columns-tb-4  {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .wrap-instagram.columns-tb-5  {
+        grid-template-columns: repeat(5,1fr);
+    }
+    .wrap-instagram.columns-tb-6  {
+        grid-template-columns: repeat(6,1fr);
+    }
+    .wrap-instagram.columns-tb-7  {
+        grid-template-columns: repeat(7,1fr);
+    }
+} 
+
+@media (max-width: 767px) {
+    .wrap-instagram.columns-mb-1  {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .wrap-instagram.columns-mb-2  {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .wrap-instagram.columns-mb-3  {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .wrap-instagram.columns-mb-4  {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .wrap-instagram.columns-mb-5  {
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .wrap-instagram.columns-mb2-1  {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .wrap-instagram.columns-mb2-2  {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .wrap-instagram.columns-mb2-3  {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+

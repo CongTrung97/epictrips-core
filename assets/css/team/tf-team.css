@@ -1,0 +1,88 @@
+/* Default  */
+.tf-team .image-team {
+  position: relative;
+  margin-bottom: 23px;
+}
+
+
+.tf-team .image-team .inner-image {
+  border-radius: 13px;
+  overflow: hidden;
+  z-index: 5;
+  position: relative;
+}
+
+.tf-team .image-team img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tf-team:hover .image-team img {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+.tf-team .social {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.tf-team .social a {
+  width: 48px;
+  height: 48px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F7F7F7;
+  color: #121212;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.tf-team .social a:hover {
+  color: #fff;
+  background: var(--theme-primary-color);
+}
+
+.tf-team .content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tf-team .position {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #64666C;
+}
+
+.tf-team .name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #121212;
+  margin-bottom: 3px;
+}
