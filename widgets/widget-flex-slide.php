@@ -2452,19 +2452,19 @@ if(!class_exists('Flex_Slide_Widget')){
 
 						$shape_html = '';
 						if ( $value['shape_one']['url'] != '' ) {
-							$shape_html .= '<img src="'.$value['shape_one']['url'].'" alt="shape" class="bg_shape elementor-repeater-item-'.$value['_id'].'_shape_one '.$value['shape_one_animation'].' '.$value['shape_one_delay'].'">';
+							$shape_html .= '<img src="'.$value['shape_one']['url'].'" alt="shape" class="bg_shape shape_one elementor-repeater-item-'.$value['_id'].'_shape_one '.$value['shape_one_animation'].' '.$value['shape_one_delay'].'">';
 						}
 						if ( $value['shape_two']['url'] != '' ) {
-							$shape_html .= '<img src="'.$value['shape_two']['url'].'" alt="shape" class="bg_shape elementor-repeater-item-'.$value['_id'].'_shape_two '.$value['shape_two_animation'].' '.$value['shape_two_delay'].'">';
+							$shape_html .= '<img src="'.$value['shape_two']['url'].'" alt="shape" class="bg_shape shape_two elementor-repeater-item-'.$value['_id'].'_shape_two '.$value['shape_two_animation'].' '.$value['shape_two_delay'].'">';
 						}	
 						if ( $value['shape_three']['url'] != '' ) {
-							$shape_html .= '<img src="'.$value['shape_three']['url'].'" alt="shape" class="bg_shape elementor-repeater-item-'.$value['_id'].'_shape_three '.$value['shape_three_animation'].' '.$value['shape_three_delay'].'">';
+							$shape_html .= '<img src="'.$value['shape_three']['url'].'" alt="shape" class="bg_shape shape_three elementor-repeater-item-'.$value['_id'].'_shape_three '.$value['shape_three_animation'].' '.$value['shape_three_delay'].'">';
 						}
 						if ( $value['shape_four']['url'] != '' ) {
-							$shape_html .= '<img src="'.$value['shape_four']['url'].'" alt="shape" class="bg_shape elementor-repeater-item-'.$value['_id'].'_shape_four '.$value['shape_four_animation'].' '.$value['shape_four_delay'].'">';
+							$shape_html .= '<img src="'.$value['shape_four']['url'].'" alt="shape" class="bg_shape shape_four elementor-repeater-item-'.$value['_id'].'_shape_four '.$value['shape_four_animation'].' '.$value['shape_four_delay'].'">';
 						}
 						if ( $value['shape_five']['url'] != '' ) {
-							$shape_html .= '<img src="'.$value['shape_five']['url'].'" alt="shape" class="bg_shape elementor-repeater-item-'.$value['_id'].'_shape_five '.$value['shape_five_animation'].' '.$value['shape_five_delay'].'">';
+							$shape_html .= '<img src="'.$value['shape_five']['url'].'" alt="shape" class="bg_shape shape_five elementor-repeater-item-'.$value['_id'].'_shape_five '.$value['shape_five_animation'].' '.$value['shape_five_delay'].'">';
 						}
 
 						if ( $settings['content_into_grid'] == 'yes' ) {
