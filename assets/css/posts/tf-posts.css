@@ -323,6 +323,7 @@
 
 .tf-posts.style2 .blog-post {
     position: relative;
+    width: 100%;
 }
 
 .tf-posts.style2 .blog-post .featured-post {
@@ -445,12 +446,30 @@
 }
 
 .tf-posts .owl-dots .owl-dot {
-    width: 10px;
-    height: 10px;
-    background: #000000;
-    display: inline-block;
-    margin: 0 5px;
-    padding: 0;
+    width: 8px;
+    height: 8px;
+    background: #64666C;
+    position: relative;
+}
+
+.tf-posts .owl-dots .owl-dot::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tf-posts .owl-carousel .owl-dots .owl-dot.active {
+    background-color: #121212;
+}
+
+.tf-posts .owl-carousel .owl-dots .owl-dot.active::after {
+    border-color: #121212;
 }
 
 .tf-posts.has-carousel.no-bullets .owl-dots,

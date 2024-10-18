@@ -484,6 +484,10 @@
     .tf-testimonial.style2 .icon-quote {
         font-size: 35px;
     }
+
+    .tf-testimonial.style2 .swiper-pagination {
+        bottom: -40px !important;
+    }
 }
 @media only screen and (max-width: 600px) {
    

@@ -87,50 +87,6 @@
         }
     }
 
-    var listCarousel = function() {
-        if ( $().owlCarousel ) {
-            $('.tf-list-carousel').each(function(){
-                var
-                $this = $(this),
-                tes1 = $this.data("column"),
-                tes2 = $this.data("column2"),
-                tes3 = $this.data("column3");
-
-                var dot = false;
-                if ($this.data("dot") == 'yes') {
-                    dot = true;
-                } 
-
-                $('.owl-carousel').on('initialized.owl.carousel translate.owl.carousel', function(e){
-                    var idx = e.item.index;
-                    $(this).find('.owl-item').removeClass('active_center');
-                    $(this).find('.owl-item').eq(idx+1).addClass('active_center');
-                });
-
-                $this.find('.owl-carousel').owlCarousel({
-                    loop: true,
-                    margin: 24,
-                    autoplayTimeout: 5000,
-                    smartSpeed: 850,
-                    slideSpeed: 500,
-                    nav: false,
-                    dots: dot,
-                    responsive: {
-                        0: {
-                            items: tes3
-                        },
-                        768: {
-                            items: tes2
-                        },
-                        1000: {
-                            items: tes1
-                        },
-                    }
-                });
-            });
-
-        }
-    }
     var swiperCarousel = function() { 
         // style 1
         var swiper = new Swiper(".testimonial-swiper-thumb", {
@@ -272,7 +228,6 @@
 
     $(window).on('elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction( 'frontend/element_ready/tf-testimonial-carousel-type-group.default', testimonialTypeGroup_Carousel );
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/tf-list-carousel.default', listCarousel );
         elementorFrontend.hooks.addAction( 'frontend/element_ready/tf-testimonial-carousel-type-group.default', swiperCarousel );
     });
 

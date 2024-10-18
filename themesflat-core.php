@@ -256,17 +256,11 @@ final class ThemesFlat_Addon_For_Elementor_vitour {
         require_once( __DIR__ . '/widgets/widget-title-section.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFTitle_Section_Widget() ); 
 
-        // require_once( __DIR__ . '/widgets/widget-counter.php' );
-        // \Elementor\Plugin::instance()->widgets_manager->register( new \TFCounter_Widget() );
-
         require_once( __DIR__ . '/widgets/widget-testimonial-type-group-carousel.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFTestimonialTypeGroupCarousel_Widget() );
 
         require_once( __DIR__ . '/widgets/widget-posts.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFPosts_Widget() );
-
-        // require_once( __DIR__ . '/widgets/widget-list.php' );
-        // \Elementor\Plugin::instance()->widgets_manager->register( new \TFList_Widget() );
 
 
         require_once( __DIR__ . '/widgets/widget-iconbox.php' );
@@ -276,14 +270,9 @@ final class ThemesFlat_Addon_For_Elementor_vitour {
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFVideo_Widget() );   
 
 
-        // require_once( __DIR__ . '/widgets/widget-list-carousel.php' );
-        // \Elementor\Plugin::instance()->widgets_manager->register( new \TFListCarousel() ); 
-
         require_once( __DIR__ . '/widgets/widget-list-image.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFListImage_Widget() ); 
 
-        // require_once( __DIR__ . '/widgets/widget-countdown.php' );
-        // \Elementor\Plugin::instance()->widgets_manager->register( new \TFCountdown_Widget() ); 
         
         require_once( __DIR__ . '/widgets/widget-team.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFTeam_Widget() ); 
@@ -291,11 +280,6 @@ final class ThemesFlat_Addon_For_Elementor_vitour {
         require_once( __DIR__ . '/widgets/widget-accordion.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \TFAccordion_Widget() ); 
 
-        // require_once( __DIR__ . '/widgets/widget-tabs.php' );
-        // \Elementor\Plugin::instance()->widgets_manager->register( new \TFTabs_Widget() );
-
-        // require_once( __DIR__ . '/widgets/widget-instagram.php' );
-        // \Elementor\Plugin::instance()->widgets_manager->register( new \TFInstagram_Widget() );
 
         require_once( __DIR__ . '/widgets/widget-flex-slide.php' );
         \Elementor\Plugin::instance()->widgets_manager->register( new \Flex_Slide_Widget() );
@@ -314,20 +298,17 @@ final class ThemesFlat_Addon_For_Elementor_vitour {
         wp_register_style( 'magnific-popup', plugins_url( '/assets/css/magnific.popup.css', __FILE__ ) );
 
         wp_register_style( 'tf-title-section', plugins_url( '/assets/css/title-section/tf-title-section.css', __FILE__ ) );
-        wp_register_style( 'tf-counter', plugins_url( '/assets/css/counter/tf-counter.css', __FILE__ ) );
-        wp_register_style( 'tf-testimonial', plugins_url( '/assets/css/testimonial/tf-testimonial.css', __FILE__ ) );
+        wp_register_style( 'tf-testimonial', plugins_url( '/assets/css/testimonial/tf-testimonial.css', __FILE__ ) );       
+        
         wp_register_style( 'tf-posts', plugins_url( '/assets/css/posts/tf-posts.css', __FILE__ ) );
         wp_register_style( 'tf-iconbox', plugins_url( '/assets/css/iconbox/tf-iconbox.css', __FILE__ ) );
         wp_register_style( 'tf-heading-section', plugins_url( '/assets/css/heading-section/tf-heading-section.css', __FILE__ ) );
         wp_register_style( 'tf-video', plugins_url( '/assets/css/video/tf-video.css', __FILE__ ) );
         wp_register_style( 'tf-list-image', plugins_url( '/assets/css/list-image/tf-list-image.css', __FILE__ ) );
         wp_register_style( 'jquery-justified', plugins_url( '/assets/css/jquery.justified.css', __FILE__ ) );
-        wp_register_style( 'tf-countdown', plugins_url( '/assets/css/countdown/tf-countdown.css', __FILE__ ) );
 
         wp_register_style( 'tf-team', plugins_url( '/assets/css/team/tf-team.css', __FILE__ ) );
         wp_register_style( 'tf-accordion', plugins_url( '/assets/css/accordion/tf-accordion.css', __FILE__ ) );
-        wp_register_style( 'tf-tabs', plugins_url( '/assets/css/tabs/tf-tabs.css', __FILE__ ) );
-        wp_register_style( 'tf-instagram', plugins_url( '/assets/css/instagram/tf-instagram.css', __FILE__ ) );
 
         wp_register_style( 'swiper-min', plugins_url( '/assets/css/swiper.min.css', __FILE__ ) );
 
@@ -357,19 +338,18 @@ final class ThemesFlat_Addon_For_Elementor_vitour {
         wp_register_script( 'anime', plugins_url( '/assets/js/anime.js', __FILE__ ), [ 'jquery' ], false, true );
         
         //widget
-        wp_register_script( 'tf-counter', plugins_url( '/assets/js/counter/tf-counter.js', __FILE__ ), [ 'jquery' ], false, true ); 
+      
 
         wp_register_script( 'tf-testimonial', plugins_url( '/assets/js/testimonial/tf-testimonial.js', __FILE__ ), [ 'jquery' ], false, true );
+        wp_register_script( 'tf-post', plugins_url( '/assets/js/post/tf-post.js', __FILE__ ), [ 'jquery' ], false, true );
+
         wp_register_script( 'tf-video', plugins_url( '/assets/js/video/tf-video.js', __FILE__ ), [ 'jquery' ], false, true );
         wp_register_script( 'tf-title', plugins_url( '/assets/js/title/tf-title.js', __FILE__ ), [ 'jquery' ], false, true );
         
         wp_enqueue_script( 'jquery-justified', plugins_url( '/assets/js/jquery.justified.min.js', __FILE__ ), [ 'jquery' ], false, true );
 
-        wp_register_script( 'countdown', plugins_url( '/assets/js/countdown.js', __FILE__ ), [ 'jquery' ], false, true );
-        wp_register_script( 'tf-countdown', plugins_url( '/assets/js/countdown/tf-countdown.js', __FILE__ ), [ 'jquery' ], false, true );
-
+       
         wp_register_script( 'tf-accordion', plugins_url( '/assets/js/accordion/tf-accordion.js', __FILE__ ), [ 'jquery' ], false, true );
-        wp_register_script( 'tf-tabs', plugins_url( '/assets/js/tabs/tf-tabs.js', __FILE__ ), [ 'jquery' ], false, true );
 
         wp_register_script( 'swiper-min', plugins_url( '/assets/js/swiper.min.js', __FILE__ ), [ 'jquery' ], false, true );
 

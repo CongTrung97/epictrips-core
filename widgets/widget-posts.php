@@ -18,7 +18,11 @@ class TFPosts_Widget extends \Elementor\Widget_Base {
     }
 
 	public function get_style_depends() {
-		return ['tf-posts'];
+		return ['swiper-min','tf-posts'];
+	}
+
+	public function get_script_depends() {
+		return ['swiper-min','tf-post'];
 	}
 
 	protected function register_controls() {
@@ -519,7 +523,7 @@ class TFPosts_Widget extends \Elementor\Widget_Base {
 	protected function render($instance = []) {
 		$settings = $this->get_settings_for_display();
 
-		$this->add_render_attribute( 'tf_posts', ['id' => "tf-posts-{$this->get_id()}", 'class' => ['tf-posts no-carousel',$settings['style'], $settings['posts_layout'], $settings['posts_layout_tablet'], $settings['posts_layout_mobile'] ], 'data-tabid' => $this->get_id()] );
+		$this->add_render_attribute( 'tf_posts', ['id' => "tf-posts-{$this->get_id()}", 'class' => ['tf-posts has-carousel',$settings['style'], $settings['posts_layout'], $settings['posts_layout_tablet'], $settings['posts_layout_mobile'] ], 'data-tabid' => $this->get_id()] );
 
 		if ( get_query_var('paged') ) {
            $paged = get_query_var('paged');
@@ -543,16 +547,58 @@ class TFPosts_Widget extends \Elementor\Widget_Base {
 			$query_args['post__not_in'] = $exclude;
 		}
 		$query_args['orderby'] = $settings['order_by'];
-		$query_args['order'] = $settings['order'];	
+		$query_args['order'] = $settings['order'];
+
+		switch ( $settings['posts_layout']) {
+			case 'column-1':
+				$column_des = 1;
+				break;
+			case 'column-2':
+				$column_des = 2;			  
+			  break;
+			case 'column-3':
+				$column_des = 3;
+				break;
+			case 'column-4':
+				$column_des = 4;
+				break;
+		}
+		
+		switch ( $settings['posts_layout_tablet']) {
+			case 'tablet-column-1':
+				$column_tab = 1;
+				break;
+			case 'tablet-column-2':
+				$column_tab = 2;			  
+			  break;
+			case 'tablet-column-3':
+				$column_tab = 3;
+				break;
+		}
+
+		switch ( $settings['posts_layout_mobile']) {
+			case 'mobile-column-1':
+				$column_mob = 1;
+				break;
+			case 'mobile-column-2':
+				$column_mob = 2;			  
+			  break;
+		}
+
+		
+
+		
 		
 		$query = new WP_Query( $query_args );
 		if ( $query->have_posts() ) : ?>
-			<div <?php echo $this->get_render_attribute_string('tf_posts'); ?>  >
-					<?php
-						$attr['settings'] = $settings; 
-						tf_get_template_widget("posts/{$settings['style']}", $attr);
-					?>
-				<?php wp_reset_postdata(); ?>
+			<div <?php echo $this->get_render_attribute_string('tf_posts'); ?>  data-column ="<?php echo $column_des; ?>" data-column2 ="<?php echo $column_tab; ?>" data-column3 ="<?php echo $column_mob; ?>">
+				<div class="owl-carousel owl-theme">
+						<?php
+							$attr['settings'] = $settings; 
+							tf_get_template_widget("posts/{$settings['style']}", $attr);
+						?>
+					<?php wp_reset_postdata(); ?>
+				</div>
 			</div>
 		<?php
 		else:
