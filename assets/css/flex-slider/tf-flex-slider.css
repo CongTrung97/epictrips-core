@@ -245,6 +245,15 @@
     visibility: visible;
 }
 
+@media only screen and (max-width: 1500px) {
+
+    .flexslider:hover .flex-direction-nav a.flex-prev {
+        left: 15px;
+    }
+    .flexslider:hover .flex-direction-nav a.flex-next {
+        right: 15px;
+    }
+}
 @media only screen and (max-width: 991px) {
     .flexslider .flex-direction-nav {
         visibility: hidden;
@@ -263,12 +272,14 @@
     .flexslider .desc br {
         display: inline-block;
     }
-}
 
-@media only screen and (max-width: 767px) {
     .flexslider .flex-direction-nav {
         display: none;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    
     .flexslider .flex_caption {
         padding-left: 15px;
         padding-right: 15px;

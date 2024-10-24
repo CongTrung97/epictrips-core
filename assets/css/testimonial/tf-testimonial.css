@@ -180,8 +180,8 @@
     background: #fff;
     opacity: 50%;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 68px;
+    height: 68px;
     border-radius: 50%;
     left: 0;
     top: 0;
@@ -488,6 +488,34 @@
     .tf-testimonial.style2 .swiper-pagination {
         bottom: -40px !important;
     }
+
+    .tf-testimonial .heading {
+        font-size: 35px;
+        line-height: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .tf-testimonial .description {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+
+    .tf-testimonial.style1 .description {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    .tf-testimonial .name {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .tf-testimonial .position {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 @media only screen and (max-width: 600px) {
    
@@ -497,13 +525,16 @@
         font-size: 30px;
         right: 0px;
     }
-    .tf-testimonial.style4 .swiper-pagination {
-        display: none;
-    }
+
 }
 
 @media only screen and (max-width: 450px) {
     .tf-testimonial .testimonial-swiper-thumb .swiper-slide {
-        width: 68px !important;
+        width: 50px !important;
+    }
+    .tf-testimonial .testimonial-swiper-thumb .avatar::after ,
+    .tf-testimonial .swiper-slide .avatar img {
+        width: 50px;
+        height:50px;
     }
 }

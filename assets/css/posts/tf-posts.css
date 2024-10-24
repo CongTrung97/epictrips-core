@@ -443,6 +443,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-top: 10px;
 }
 
 .tf-posts .owl-dots .owl-dot {
@@ -546,6 +547,11 @@
 
     .tf-posts.style3 .blog-post .content {
         padding: 30px 20px;
+    }
+
+    .tf-posts.style2 .blog-post .content {
+        padding: 15px;
+        margin: 0 10px;
     }
 }
 

@@ -91,9 +91,19 @@
         // style 1
         var swiper = new Swiper(".testimonial-swiper-thumb", {
             spaceBetween: 6,
-            slidesPerView: 5,
             freeMode: true,
             watchSlidesProgress: true,
+            breakpoints: {
+                450: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 5,
+                },
+            },
         });
         var swiper2 = new Swiper(".testimonial-swiper-content", {
         spaceBetween: 0,
